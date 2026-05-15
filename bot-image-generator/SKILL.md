@@ -42,9 +42,11 @@ description: |
 }
 ```
 
-- **model**: 优先 `openai/gpt-image-2`，没有则回退到 `gpt-image-1.5`
+- **model**: 使用 `openai/gpt-image-2`，
 - **prompt**: 根据用户请求构造，可融合风格描述
 - **filename**: 用任务编号命名
+
+注：openai/gpt-image-2可能会超时，如果超时了就多试几次，千万不能为了效率切换到其他模型。
 
 工具返回 MEDIA 路径（本地文件），类似:
 ```
